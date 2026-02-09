@@ -56,9 +56,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                                     <span>Contact data</span>
                                 </li>
                                 <li className="nav-item">
-                                    <span>News</span>
-                                </li>
-                                <li className="nav-item">
                                     <span>Question-answer</span>
                                 </li>
                                 <li className="nav-item">

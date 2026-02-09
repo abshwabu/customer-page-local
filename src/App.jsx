@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar'
 import TopBar from './components/TopBar'
 import CategoryGrid from './components/CategoryGrid'
 import Features from './components/Features'
-import LatestNews from './components/LatestNews'
 import BrandGrid from './components/BrandGrid'
 import Footer from './components/Footer'
 import PopularProducts from './components/PopularProducts'
@@ -26,7 +25,6 @@ function App() {
           <BrandGrid />
           <Features />
           <PopularProducts />
-          <LatestNews />
         </main>
         <Footer />
       </div>
