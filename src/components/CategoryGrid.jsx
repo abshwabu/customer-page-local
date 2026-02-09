@@ -41,7 +41,7 @@ const CategoryGrid = () => {
                     </div>
                 </div>
 
-                <div className="mosaic-item">
+                <div className="mosaic-item" onClick={() => console.log(`Clicked ${getCat(0).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(0).name}</div>
                         <div className="cat-count">{getCat(0).count}</div>
@@ -49,7 +49,7 @@ const CategoryGrid = () => {
                     <img src={getCat(0).image || "https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?w=500&auto=format&fit=crop&q=60"} alt="Oils" className="cat-image" />
                 </div>
 
-                <div className="mosaic-item">
+                <div className="mosaic-item" onClick={() => console.log(`Clicked ${getCat(1).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(1).name}</div>
                         <div className="cat-count">{getCat(1).count}</div>
@@ -57,13 +57,13 @@ const CategoryGrid = () => {
                     <img src={getCat(1).image || "https://images.unsplash.com/photo-1552176625-e47ff529b595?w=500&auto=format&fit=crop&q=60"} alt="Glass" className="cat-image" />
                 </div>
 
-                <div className="mosaic-item">
+                <div className="mosaic-item" onClick={() => console.log(`Clicked ${getCat(2).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(2).name}</div>
                     </div>
                 </div>
 
-                <div className="mosaic-item">
+                <div className="mosaic-item" onClick={() => console.log(`Clicked ${getCat(3).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(3).name}</div>
                         <div className="cat-count">{getCat(3).count}</div>
@@ -71,7 +71,7 @@ const CategoryGrid = () => {
                     <img src={getCat(3).image || "https://images.unsplash.com/photo-1619641219800-4cb50c9509ee?w=500&auto=format&fit=crop&q=60"} alt="Battery" className="cat-image" />
                 </div>
 
-                <div className="mosaic-item span-2">
+                <div className="mosaic-item span-2" onClick={() => console.log(`Clicked ${getCat(4).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(4).name}</div>
                         <div className="cat-count">{getCat(4).count}</div>
@@ -79,14 +79,14 @@ const CategoryGrid = () => {
                     <img src={getCat(4).image || "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=500&auto=format&fit=crop&q=60"} alt="Maintenance" className="cat-image" />
                 </div>
 
-                <div className="mosaic-item">
+                <div className="mosaic-item" onClick={() => console.log(`Clicked ${getCat(5).name}`)}>
                     <div className="cat-info">
                         <div className="cat-name">{getCat(5).name}</div>
                         <div className="cat-count">{getCat(5).count}</div>
                     </div>
                 </div>
 
-                <div className="mosaic-item span-1" style={{ backgroundColor: '#f8f9fa', color: '#2563eb' }}>
+                <div className="mosaic-item span-1" style={{ backgroundColor: '#f8f9fa', color: '#2563eb' }} onClick={() => console.log("Clicked Audio/Stereo")}>
                     <ul style={{ padding: '20px', fontSize: '14px' }}>
                         <li style={{ marginBottom: '10px', cursor: 'pointer' }}>Car audio system</li>
                         <li style={{ cursor: 'pointer' }}>Car stereo</li>

@@ -67,6 +67,17 @@
     overflow: hidden;
     padding: 24px;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mosaic-item:not(.white-bg):hover {
+    background-color: #38bdf8;
+    /* Light blue */
+}
+
+.mosaic-item:not(.white-bg):active {
+    transform: scale(0.98);
 }
 
 .mosaic-item.white-bg {
