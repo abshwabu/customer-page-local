@@ -1,5 +1,6 @@
 import React from 'react'
 import './CategoryGrid.css'
+import { ArrowRight } from 'lucide-react'
 import { apiSlice } from '../features/api/apiSlice'
 
 const CategoryGrid = () => {
@@ -32,7 +33,12 @@ const CategoryGrid = () => {
         <section className="category-section">
             <div className="mosaic-grid">
                 <div className="mosaic-item white-bg">
-                    {/* Hero overlap area */}
+                    <div className="hero-content-inline">
+                        <h1 className="hero-title">PARTS.RESOURCE: DEMO-VERSION</h1>
+                        <a href="#" className="hero-link">
+                            More about the store <ArrowRight size={14} />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="mosaic-item">

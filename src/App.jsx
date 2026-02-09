@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import Sidebar from './components/Sidebar'
 import TopBar from './components/TopBar'
-import Hero from './components/Hero'
 import CategoryGrid from './components/CategoryGrid'
 import Features from './components/Features'
 import LatestNews from './components/LatestNews'
@@ -23,7 +22,6 @@ function App() {
       <div className={`main-content ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
         <TopBar />
         <main>
-          <Hero />
           <CategoryGrid />
           <BrandGrid />
           <Features />
