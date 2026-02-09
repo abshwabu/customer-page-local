@@ -1,0 +1,116 @@
+.category-section {
+    padding: 0 40px 40px 40px;
+    background-color: var(--color-primary);
+    margin-top: -100px;
+    /* Pull grid up to sit next to Hero text */
+    position: relative;
+    z-index: 10;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 2px;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    transition: opacity 0.2s;
+}
+
+.category-card:hover {
+    opacity: 0.95;
+}
+
+/* Specific grid placements based on screenshot */
+.cat-oils {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.cat-glass {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* This implies 3 columns logic, let's adjust */
+
+/* 
+  Looking at screenshot: 
+  Row 1: Title/Empty (left half) | Oils | Car Glass
+  BUT the previous design had the text on the white background.
+  Wait, the screenshot shows:
+  Left: "PARTS.RESOURCE..." (Hero)
+  Right of Hero: Oils | Car Glass
+  
+  Row 2: Tyres | Batteries | Maintenance
+  
+  Actually, it looks like a grid where:
+  Row 1: [Hero/Intro Text 2 cols] [Oils 1 col] [Glass 1 col]
+  Row 2: [Tyres 1 col] [Batteries 1 col] [Maintenance 2 cols]
+  
+  Let's try a 4-column grid.
+*/
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 280px;
+    gap: 2px;
+}
+
+.mosaic-item {
+    position: relative;
+    background-color: var(--color-accent);
+    overflow: hidden;
+    padding: 24px;
+    color: white;
+}
+
+.mosaic-item.white-bg {
+    background-color: white;
+    grid-column: span 2;
+    padding: 0 40px 0 0;
+    /* Adjust padding as it is left of grid */
+    display: flex;
+    align-items: center;
+}
+
+/* Item Spans */
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-1 {
+    grid-column: span 1;
+}
+
+.cat-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.cat-info {
+    position: relative;
+    z-index: 10;
+}
+
+.cat-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.cat-count {
+    font-size: 12px;
+    opacity: 0.8;
+}

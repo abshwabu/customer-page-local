@@ -1,0 +1,35 @@
+.features-section {
+    padding: 20px 40px;
+    background-color: var(--color-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 16px;
+    padding: 30px;
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.feature-icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.feature-content p {
+    font-size: 13px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}

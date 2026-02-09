@@ -1,0 +1,188 @@
+/* PopularProducts.css */
+.popular-products-section {
+    padding: 30px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Exactly 4 columns as per screenshot */
+    gap: 0;
+    /* Cards touch each other in screenshot usually, or have thin borders. Let's use slight gap or simple borders */
+    border: 1px solid #e5e7eb;
+}
+
+.product-card {
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 480px;
+    /* Ensure uniform height */
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.product-card:last-child {
+    border-right: none;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.product-image-container {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 15px;
+    height: 40px;
+    /* Limit height for 2 lines */
+    overflow: hidden;
+}
+
+/* Specs Table */
+.product-specs {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.spec-label {
+    text-align: left;
+    color: #9ca3af;
+}
+
+.spec-value {
+    text-align: right;
+    font-weight: 500;
+    color: #111;
+}
+
+/* Footer Section with Price and Button */
+.product-footer {
+    margin-top: auto;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.btn-cart {
+    width: 100%;
+    background-color: #007bff;
+    /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.btn-cart:hover {
+    background-color: #0056b3;
+}
+
+.btn-learn {
+    width: 100%;
+    background-color: #f3f4f6;
+    /* Gray */
+    color: #374151;
+    border: none;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.btn-learn:hover {
+    background-color: #e5e7eb;
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+/* View all bar */
+.view-all-bar {
+    width: 100%;
+    background-color: #f3f4f6;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        border-right: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+}
+
+@media (max-width: 640px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        border-right: none;
+    }
+}
