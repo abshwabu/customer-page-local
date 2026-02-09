@@ -1,5 +1,4 @@
 .sidebar {
-    width: 260px;
     background-color: var(--color-sidebar-bg);
     color: var(--color-sidebar-text);
     height: 100vh;
@@ -12,6 +11,38 @@
     z-index: 100;
     overflow-y: auto;
     /* Make sidebar scrollable */
+    transition: width 0.3s ease;
+}
+
+.sidebar.open {
+    width: 260px;
+}
+
+.sidebar.closed {
+    width: 60px;
+    align-items: center;
+    /* Center icons when closed */
+}
+
+/* Vertical Text for Closed State */
+.sidebar-vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.sidebar-vertical-text .menu-icon {
+    transform: rotate(90deg);
+    margin-bottom: 10px;
 }
 
 /* Optional: Custom Scrollbar for Webkit */
@@ -80,6 +111,13 @@
     transition: background-color 0.2s;
     text-transform: uppercase;
     font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar.closed .sidebar-action-item {
+    justify-content: center;
+    padding: 12px 0;
 }
 
 .sidebar-action-item:hover {
@@ -99,6 +137,14 @@
     cursor: pointer;
     color: #cbd5e0;
     transition: color 0.2s, background-color 0.2s;
+    white-space: nowrap;
+    /* Prevent text wrapping during transition */
+    overflow: hidden;
+}
+
+.sidebar.closed .nav-item {
+    justify-content: center;
+    padding: 12px 0;
 }
 
 .nav-item:hover {

@@ -11,10 +11,16 @@ import Footer from './components/Footer'
 import PopularProducts from './components/PopularProducts'
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
   return (
     <div className="app-container">
-      <Sidebar />
-      <div className="main-content">
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <div className={`main-content ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
         <TopBar />
         <main>
           <Hero />
